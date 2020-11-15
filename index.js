@@ -16,7 +16,7 @@ const info = require("./lib/info.js");
 const BotName = 'AlphaBot'; 
 const instagram = 'https://instagram.com/raphser'; 
 const telegram = 'https://t.me/PaelKun'; 
-const kapanbotaktif = 'KETIKA HANYA DIAKTIFKAN'; 
+const kapanbotaktif = 'KETIKA DIAKTIFKAN'; 
 const youtube = 'PaelYT';
 //const grupch1 = 'belum ada grup'; 
 //const grupch2 = 'belum ada grup' ; 
@@ -83,7 +83,7 @@ conn.on('message-new', async(m) =>
 
 // Groups
 
-if (text.includes("!buatgrup"))
+if (text.includes("#buatgrup"))
    {
 var nama = text.split("#buatgrup")[1].split("-nomor")[0];
 var nom = text.split("-nomor")[1];
@@ -374,14 +374,14 @@ var tampilTanggal = "TANGGAL: " + hari + ", " + tanggal + " " + bulan + " " + ta
 var tampilWaktu = "JAM: " + jam + ":" + menit + ":" + detik;
 conn.sendMessage(id, info.info(id, BotName, corohelp, tampilTanggal, tampilWaktu, instagram, telegram, youtube, kapanbotaktif) ,MessageType.text);
 }
-else if (text == '!pict'){
-conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok\n\nMisal: !pict cowok' ,MessageType.text);
+else if (text == '#pict'){
+conn.sendMessage(id, 'ulangi dengan  #pict cewek/cowok\n\nMisal: #pict cowok' ,MessageType.text);
 }
    if (messageType == 'imageMessage')
    {
       let caption = imageMessage.caption.toLocaleLowerCase()
       const buffer = await conn.downloadMediaMessage(m) // to decrypt & use as a buffer
-      if (caption == '!sticker')
+      if (caption == '#sticker')
       {
          const stiker = await conn.downloadAndSaveMediaMessage(m) // to decrypt & save to file
 
@@ -415,7 +415,7 @@ conn.sendMessage(id, 'ulangi dengan  !pict cewek/cowok\n\nMisal: !pict cowok' ,M
       }
 
    };
-      if (text.includes("!covid"))
+      if (text.includes("#covid"))
    {
 const get = require('got')
     const body = await get.post('https://api.kawalcorona.com/indonesia', {
@@ -452,7 +452,7 @@ const get = require('got')
 
          });
    }
-   else if (text.includes("!nama ")) 
+   else if (text.includes("#nama ")) 
   {
     const cheerio = require('cheerio');
     const request = require('request');
@@ -600,8 +600,8 @@ if (text.includes("#animepict"))
     
     });
     }
- else if (text.includes("!ttsid")) {
-  var teks = text.split("!ttsid ")[1];
+ else if (text.includes("#ttsid")) {
+  var teks = text.split("#ttsid ")[1];
   var path = require('path');
   var text1 = teks.slice(6);
   text1 = suara;
@@ -628,14 +628,14 @@ const buffer = fs.readFileSync(filepath)
 };
 }
 if (text.includes("#lirik")){
-	const teks = text.split("!lirik")[1]
+	const teks = text.split("#lirik")[1]
 	axios.get(`http://scrap.terhambar.com/lirik?word=${teks}`).then ((res) => {
 	 	let hasil = `LIRIK DARI LAGU ${teks} ADALAH\n\n\n ${res.data.result.lirik}`
 	conn.sendMessage(id, hasil, MessageType.text)
 	})
 }
 if (text.includes("#alay")){
-	const alay = text.split("!alay")[1]
+	const alay = text.split("#alay")[1]
 	axios.get(`https://api.terhambar.com/bpk?kata=${alay}`).then ((res) =>
 		{ let hasil = `${res.data.text}`
 		conn.sendMessage(id, hasil, MessageType.text)
