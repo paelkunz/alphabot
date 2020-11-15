@@ -36,7 +36,7 @@ BOT WHATSAPP YANG BISA DIGUNAKAN DI TERMUX
 |       ✅       | ANIMEPICT                         |
 |       ✅       | LIRIK                             |
 |       ✅       | ALAY                              |
-|       ✅       | YT,YTMP3,IG,TWT DOWNLOADER        |
+|       ❌       | YT,YTMP3,IG,TWT DOWNLOADER        |
 |       ✅       | WIKIPEDIA                         |
 |       ✅       | ARTI NAMA                         |
 |       ✅       | SHOLAT                            |
@@ -44,7 +44,7 @@ BOT WHATSAPP YANG BISA DIGUNAKAN DI TERMUX
 |       ✅       | KAMING SUN                        |
 
 ket : ✅ : aktif
-
+      ❌ : K O 
 
 
 
